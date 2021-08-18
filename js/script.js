@@ -10,6 +10,15 @@ let previousOperation = ''
 let currentOperation = ''
 let operation = undefined
 
+ const chooseOperation = (operator) => {
+    if(currentOperation === '') {
+        return
+    }
+    operation = operator
+    previousOperation = currentOperation
+    currentOperation = ''
+ }
+
 const updateResult = () => {
     numCurr.innerText = currentOperation
     numPrev.innerText = previousOperation
@@ -36,6 +45,13 @@ numbers.forEach((num) => {
 clean.addEventListener('click', () => {
     deleteNumber()
     updateResult()
+})
+
+operators.forEach((operator) => {
+    operator.addEventListener('click', () => {
+        chooseOperation(operator.innerText)
+        updateResult()
+    })
 })
 
 
