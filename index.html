@@ -7,30 +7,34 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="css/style.css">
+  <script src="./js/script.js" defer></script>
   <link rel="icon" type="image/png" href="./images/calc.png">
   <title>Calculator</title> 
 </head>
 <body>
 
   <div class="container">
-    <div class="container__desktop"></div>
+    <div class="container__desktop">
+      <div class="previous_number"></div>
+      <div class="current_number"></div>
+    </div>
     <div class="container__buttonbox">
-      <button class="container__buttonbox__button">7</button>
-      <button class="container__buttonbox__button">8</button>
-      <button class="container__buttonbox__button">9</button>
+      <button class="container__buttonbox__button num">7</button>
+      <button class="container__buttonbox__button num">8</button>
+      <button class="container__buttonbox__button num">9</button>
       <button class="container__buttonbox__button btn-del">del</button>
-      <button class="container__buttonbox__button">4</button>
-      <button class="container__buttonbox__button">5</button>
-      <button class="container__buttonbox__button">6</button>
-      <button class="container__buttonbox__button">+</button>
-      <button class="container__buttonbox__button">1</button>
-      <button class="container__buttonbox__button">2</button>
-      <button class="container__buttonbox__button">3</button>
-      <button class="container__buttonbox__button">-</button>
-      <button class="container__buttonbox__button">.</button>
-      <button class="container__buttonbox__button">0</button>
-      <button class="container__buttonbox__button">/</button>
-      <button class="container__buttonbox__button">×</button>
+      <button class="container__buttonbox__button num">4</button>
+      <button class="container__buttonbox__button num">5</button>
+      <button class="container__buttonbox__button num">6</button>
+      <button class="container__buttonbox__button operator">+</button>
+      <button class="container__buttonbox__button num">1</button>
+      <button class="container__buttonbox__button num">2</button>
+      <button class="container__buttonbox__button num">3</button>
+      <button class="container__buttonbox__button operator">-</button>
+      <button class="container__buttonbox__button num">.</button>
+      <button class="container__buttonbox__button num">0</button>
+      <button class="container__buttonbox__button operator">/</button>
+      <button class="container__buttonbox__button operator">×</button>
       <button class="container__buttonbox__button btn-reset">reset</button>
       <button class="container__buttonbox__button btn-result">=</button>
   </div>
