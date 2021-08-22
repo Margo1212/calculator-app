@@ -10,18 +10,71 @@ let previousOperation = ''
 let currentOperation = ''
 let operation = undefined
 
- const chooseOperation = (operator) => {
+
+const calculate = () => {
+    let action
+    if(!previousOperation || !currentOperation) {
+        return
+    } 
+
+    const previous = parseFloat(previousOperation)
+    const current = parseFloat(currentOperation)
+
+    if(isNaN(previous) || isNaN(current)) {
+        return
+    }
+
+    switch (operation) {
+        case '+':
+            action = previous + current
+            break;
+        case '-' :
+            action = previous - current   
+            break;
+        case '/' :
+            if(currentOperation === 0) {
+                resetResult()
+                return
+            }
+            action = previous / current   
+            break;
+        case '×' :
+            action = previous * current   
+            break;    
+        default:
+            return;
+    }
+
+    currentOperation = action
+    operation = undefined
+    previousOperation = ''
+}
+
+
+const chooseOperation = (operator) => {
     if(currentOperation === '') {
         return
+    }
+    if (previousOperation !== '') {
+        const prev = numPrev.innerText
+        if(currentOperation.toString() === '0' && previous[previous.length -1] === '/') {
+            resetResult()
+            return
+        }
+        calculate()
     }
     operation = operator
     previousOperation = currentOperation
     currentOperation = ''
- }
+}
 
 const updateResult = () => {
     numCurr.innerText = currentOperation
-    numPrev.innerText = previousOperation
+    if(operation != null) {
+        numPrev.innerText = previousOperation + operation
+    } else {
+        numPrev.innerText = ''
+    }
 }
 
 const addNum = (num) => {
@@ -33,6 +86,12 @@ const addNum = (num) => {
 
 const deleteNumber = () => {
     currentOperation = currentOperation.toString().slice(0, -1)
+}
+
+const resetResult = () => {
+previousOperation = ''
+currentOperation = ''
+operation = undefined
 }
 
 numbers.forEach((num) => {
@@ -52,6 +111,16 @@ operators.forEach((operator) => {
         chooseOperation(operator.innerText)
         updateResult()
     })
+})
+
+equal.addEventListener('click', () => {
+    calculate()
+    updateResult()
+})
+
+reset.addEventListener('click', () => {
+    resetResult()
+    updateResult()
 })
 
 
