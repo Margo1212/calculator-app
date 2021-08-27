@@ -15,7 +15,7 @@
   width: 20rem;
   height: 30rem;
 }
-* body .container__desktop {
+* body .container .desktop {
   width: 20rem;
   height: 4.8rem;
   display: flex;
@@ -30,56 +30,61 @@
   border-radius: 5px;
   color: #fff;
 }
-* body .container__desktop .previous_number {
+* body .container .desktop .previous_number {
   font-size: 12px;
 }
-* body .container__buttonbox {
+* body .container .buttonbox {
   width: 20rem;
   height: 20rem;
   margin: 5px auto;
   padding: 10px;
-  display: flex;
+  display: grid;
   justify-content: center;
-  flex-wrap: wrap;
+  align-content: center;
+  grid-template-columns: repeat(4, 60px);
+  grid-template-rows: repeat(5, 55px);
   background-color: #232c43;
   border-radius: 5px;
 }
-* body .container__buttonbox__button {
+* body .container .buttonbox .button {
   width: 55px;
   height: 45px;
   margin: 5px;
   background-color: #eae3dc;
   box-shadow: inset 0px -3px 1px 1px #b4a597;
   border: none;
+  cursor: pointer;
+  outline: none;
   border-radius: 3px;
   font-family: "Spartan", sans-serif;
   font-size: 16px;
   color: #444b5a;
 }
-* body .container__buttonbox .btn-reset,
-* body .container__buttonbox .btn-result {
-  width: 7.5rem;
+* body .container .buttonbox .btn-reset,
+* body .container .buttonbox .btn-result {
+  width: 7.2rem;
   height: 40px;
+  grid-column: span 2;
   margin: 5px;
   border: none;
   border-radius: 3px;
   color: #fff;
 }
-* body .container__buttonbox .btn-reset,
-* body .container__buttonbox .btn-del {
+* body .container .buttonbox .btn-reset,
+* body .container .buttonbox .btn-del {
   background-color: #637097;
   box-shadow: inset 0px -3px 1px 1px #404e72;
   text-transform: uppercase;
   font-size: 10px;
 }
-* body .container__buttonbox .btn-reset,
-* body .container__buttonbox .btn-result,
-* body .container__buttonbox .btn-del {
+* body .container .buttonbox .btn-reset,
+* body .container .buttonbox .btn-result,
+* body .container .buttonbox .btn-del {
   color: #fff;
   border: none;
   border-radius: 3px;
 }
-* body .container__buttonbox .btn-result {
+* body .container .buttonbox .btn-result {
   background-color: #d03f2f;
   box-shadow: inset 0px -3px 1px 1px #93261a;
 }

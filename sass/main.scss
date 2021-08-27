@@ -15,7 +15,7 @@
             width: 20rem;
             height: 30rem;
 
-            &__desktop {
+            .desktop {
                 width: 20rem;
                 height: 4.8rem;
                 display: flex;
@@ -35,24 +35,28 @@
                 }
             }
 
-            &__buttonbox {
+            .buttonbox {
                 width: 20rem;
                 height: 20rem;
                 margin: 5px auto;
                 padding: 10px;
-                display: flex;
+                display: grid;
                 justify-content: center;
-                flex-wrap: wrap;
+                align-content: center;
+                grid-template-columns: repeat(4, 60px);
+                grid-template-rows: repeat(5, 55px);
                 background-color: hsl(223, 31%, 20%);
                 border-radius: 5px;
                 
-                &__button {
+                .button {
                     width: 55px;
                     height: 45px; 
                     margin: 5px;
                     background-color: hsl(30, 25%, 89%);
                     box-shadow: inset 0px -3px 1px 1px hsl(28, 16%, 65%);
                     border: none;
+                    cursor: pointer;
+                    outline: none;
                     border-radius: 3px;
                     font-family: 'Spartan', sans-serif;
                     font-size: 16px;
@@ -61,8 +65,9 @@
 
                 .btn-reset,
                 .btn-result{
-                    width: 7.5rem;
+                    width: 7.2rem;
                     height: 40px;
+                    grid-column: span 2;
                     margin: 5px;
                     border: none;
                     border-radius: 3px;

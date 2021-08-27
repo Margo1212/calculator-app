@@ -32,7 +32,7 @@ const calculate = () => {
             action = previous - current   
             break;
         case '/' :
-            if(currentOperation === 0) {
+            if(current === 0) {
                 resetResult()
                 return
             }
@@ -56,7 +56,7 @@ const chooseOperation = (operator) => {
         return
     }
     if (previousOperation !== '') {
-        const prev = numPrev.innerText
+        const previous = numPrev.innerText
         if(currentOperation.toString() === '0' && previous[previous.length -1] === '/') {
             resetResult()
             return
