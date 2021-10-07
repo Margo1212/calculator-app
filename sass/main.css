@@ -1,15 +1,22 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 * body {
   width: 100%;
   height: 100vh;
   background-color: #3a4764;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 * body .heading {
   position: relative;
   color: #c7c7c7;
@@ -17,23 +24,37 @@
   margin: 10px;
   padding: 10px;
 }
+
 * body .heading .logo {
   position: absolute;
   top: 5rem;
   left: 4rem;
 }
+
 * body .container {
   width: 20rem;
   height: 30rem;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
+
 * body .container .desktop {
   width: 20rem;
   height: 4.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 20px;
   word-wrap: break-word;
   word-break: break-all;
@@ -42,39 +63,51 @@
   border-radius: 5px;
   color: #fff;
 }
+
 * body .container .desktop .previous_number {
   font-size: 12px;
 }
+
 * body .container .buttonbox {
   width: 20rem;
   height: 20rem;
   margin: 5px auto;
   padding: 10px;
+  display: -ms-grid;
   display: grid;
-  justify-content: center;
-  align-content: center;
-  grid-template-columns: repeat(4, 60px);
-  grid-template-rows: repeat(5, 55px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-columns: (60px)[4];
+      grid-template-columns: repeat(4, 60px);
+  -ms-grid-rows: (55px)[5];
+      grid-template-rows: repeat(5, 55px);
   background-color: #232c43;
   border-radius: 5px;
 }
+
 * body .container .buttonbox .button {
   width: 55px;
   height: 45px;
   margin: 5px;
   background-color: #eae3dc;
-  box-shadow: inset 0px -3px 1px 1px #b4a597;
+  -webkit-box-shadow: inset 0px -3px 1px 1px #b4a597;
+          box-shadow: inset 0px -3px 1px 1px #b4a597;
   border: none;
   cursor: pointer;
   outline: none;
   border-radius: 3px;
-  font-family: "Spartan", sans-serif;
+  font-family: 'Spartan', sans-serif;
   font-size: 16px;
   color: #444b5a;
 }
+
 * body .container .buttonbox .button:hover {
   background-color: #cccccc;
 }
+
 * body .container .buttonbox .btn-reset,
 * body .container .buttonbox .btn-result {
   width: 7.2rem;
@@ -85,18 +118,23 @@
   border-radius: 3px;
   color: #fff;
 }
+
 * body .container .buttonbox .btn-reset,
 * body .container .buttonbox .btn-del {
   background-color: #637097;
-  box-shadow: inset 0px -3px 1px 1px #404e72;
+  -webkit-box-shadow: inset 0px -3px 1px 1px #404e72;
+          box-shadow: inset 0px -3px 1px 1px #404e72;
   text-transform: uppercase;
   font-size: 10px;
 }
+
 * body .container .buttonbox .btn-reset:hover,
 * body .container .buttonbox .btn-del:hover {
   background-color: #404e72;
-  box-shadow: inset 0px -3px 1px 1px #2e3a56;
+  -webkit-box-shadow: inset 0px -3px 1px 1px #2e3a56;
+          box-shadow: inset 0px -3px 1px 1px #2e3a56;
 }
+
 * body .container .buttonbox .btn-reset,
 * body .container .buttonbox .btn-result,
 * body .container .buttonbox .btn-del {
@@ -104,13 +142,16 @@
   border: none;
   border-radius: 3px;
 }
+
 * body .container .buttonbox .btn-result {
   background-color: #d03f2f;
-  box-shadow: inset 0px -3px 1px 1px #93261a;
-}
-* body .container .buttonbox .btn-result:hover {
-  background-color: #93261a;
-  box-shadow: inset 0px -3px 1px 1px #68170d;
+  -webkit-box-shadow: inset 0px -3px 1px 1px #93261a;
+          box-shadow: inset 0px -3px 1px 1px #93261a;
 }
 
-/*# sourceMappingURL=style.css.map */
+* body .container .buttonbox .btn-result:hover {
+  background-color: #93261a;
+  -webkit-box-shadow: inset 0px -3px 1px 1px #68170d;
+          box-shadow: inset 0px -3px 1px 1px #68170d;
+}
+/*# sourceMappingURL=main.css.map */
